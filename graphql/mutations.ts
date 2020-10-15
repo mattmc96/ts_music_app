@@ -9,7 +9,7 @@ export const createAlbumCategory = /* GraphQL */ `
   ) {
     createAlbumCategory(input: $input, condition: $condition) {
       id
-      name
+      title
       albums {
         items {
           id
@@ -17,7 +17,7 @@ export const createAlbumCategory = /* GraphQL */ `
           by
           numberOfLikes
           imageUri
-          artistsHeadLine
+          artistsHeadline
           albumCategoryId
           createdAt
           updatedAt
@@ -36,7 +36,7 @@ export const updateAlbumCategory = /* GraphQL */ `
   ) {
     updateAlbumCategory(input: $input, condition: $condition) {
       id
-      name
+      title
       albums {
         items {
           id
@@ -44,7 +44,7 @@ export const updateAlbumCategory = /* GraphQL */ `
           by
           numberOfLikes
           imageUri
-          artistsHeadLine
+          artistsHeadline
           albumCategoryId
           createdAt
           updatedAt
@@ -63,7 +63,7 @@ export const deleteAlbumCategory = /* GraphQL */ `
   ) {
     deleteAlbumCategory(input: $input, condition: $condition) {
       id
-      name
+      title
       albums {
         items {
           id
@@ -71,7 +71,7 @@ export const deleteAlbumCategory = /* GraphQL */ `
           by
           numberOfLikes
           imageUri
-          artistsHeadLine
+          artistsHeadline
           albumCategoryId
           createdAt
           updatedAt
@@ -94,7 +94,7 @@ export const createAlbum = /* GraphQL */ `
       by
       numberOfLikes
       imageUri
-      artistsHeadLine
+      artistsHeadline
       songs {
         items {
           id
@@ -111,7 +111,7 @@ export const createAlbum = /* GraphQL */ `
       albumCategoryId
       albumCategory {
         id
-        name
+        title
         albums {
           nextToken
         }
@@ -134,7 +134,7 @@ export const updateAlbum = /* GraphQL */ `
       by
       numberOfLikes
       imageUri
-      artistsHeadLine
+      artistsHeadline
       songs {
         items {
           id
@@ -151,7 +151,7 @@ export const updateAlbum = /* GraphQL */ `
       albumCategoryId
       albumCategory {
         id
-        name
+        title
         albums {
           nextToken
         }
@@ -174,7 +174,7 @@ export const deleteAlbum = /* GraphQL */ `
       by
       numberOfLikes
       imageUri
-      artistsHeadLine
+      artistsHeadline
       songs {
         items {
           id
@@ -191,7 +191,7 @@ export const deleteAlbum = /* GraphQL */ `
       albumCategoryId
       albumCategory {
         id
-        name
+        title
         albums {
           nextToken
         }
@@ -221,14 +221,14 @@ export const createSong = /* GraphQL */ `
         by
         numberOfLikes
         imageUri
-        artistsHeadLine
+        artistsHeadline
         songs {
           nextToken
         }
         albumCategoryId
         albumCategory {
           id
-          name
+          title
           createdAt
           updatedAt
         }
@@ -258,14 +258,14 @@ export const updateSong = /* GraphQL */ `
         by
         numberOfLikes
         imageUri
-        artistsHeadLine
+        artistsHeadline
         songs {
           nextToken
         }
         albumCategoryId
         albumCategory {
           id
-          name
+          title
           createdAt
           updatedAt
         }
@@ -295,14 +295,14 @@ export const deleteSong = /* GraphQL */ `
         by
         numberOfLikes
         imageUri
-        artistsHeadLine
+        artistsHeadline
         songs {
           nextToken
         }
         albumCategoryId
         albumCategory {
           id
-          name
+          title
           createdAt
           updatedAt
         }

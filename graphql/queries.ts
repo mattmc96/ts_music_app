@@ -6,7 +6,7 @@ export const getAlbumCategory = /* GraphQL */ `
   query GetAlbumCategory($id: ID!) {
     getAlbumCategory(id: $id) {
       id
-      name
+      title
       albums {
         items {
           id
@@ -14,7 +14,7 @@ export const getAlbumCategory = /* GraphQL */ `
           by
           numberOfLikes
           imageUri
-          artistsHeadLine
+          artistsHeadline
           albumCategoryId
           createdAt
           updatedAt
@@ -35,7 +35,7 @@ export const listAlbumCategorys = /* GraphQL */ `
     listAlbumCategorys(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
+        title
         albums {
           nextToken
         }
@@ -54,7 +54,7 @@ export const getAlbum = /* GraphQL */ `
       by
       numberOfLikes
       imageUri
-      artistsHeadLine
+      artistsHeadline
       songs {
         items {
           id
@@ -71,7 +71,7 @@ export const getAlbum = /* GraphQL */ `
       albumCategoryId
       albumCategory {
         id
-        name
+        title
         albums {
           nextToken
         }
@@ -96,14 +96,14 @@ export const listAlbums = /* GraphQL */ `
         by
         numberOfLikes
         imageUri
-        artistsHeadLine
+        artistsHeadline
         songs {
           nextToken
         }
         albumCategoryId
         albumCategory {
           id
-          name
+          title
           createdAt
           updatedAt
         }
@@ -129,14 +129,14 @@ export const getSong = /* GraphQL */ `
         by
         numberOfLikes
         imageUri
-        artistsHeadLine
+        artistsHeadline
         songs {
           nextToken
         }
         albumCategoryId
         albumCategory {
           id
-          name
+          title
           createdAt
           updatedAt
         }
@@ -168,7 +168,7 @@ export const listSongs = /* GraphQL */ `
           by
           numberOfLikes
           imageUri
-          artistsHeadLine
+          artistsHeadline
           albumCategoryId
           createdAt
           updatedAt
